@@ -1,0 +1,5 @@
+#RewriteCond %{THE_REQUEST} ^GET.*index\.php [NC]
+#RewriteRule (.*?)index\.php/*(.*) /$1$2 [R=301,NE,L]
+
+RewriteCond %{THE_REQUEST} ^.*/index\.php
+RewriteRule ^(.*)index.php$ /$1 [R=301,L]
