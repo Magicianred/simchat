@@ -3,7 +3,7 @@
 <html lang = "ko">
 <head>
 	<meta http-equiv = "content-type" content = "text/html" charset = "utf-8">
-	<title> SIMCHAT 0.0.1 </title>
+	<title> SIMCHAT 0.0.2 </title>
 	<!-- <meta name = "viewport" content = "width=device-width, initial-scale=1.0"> -->
 	<link href = "https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel = "stylesheet"> 
 	<link href = "./css/main.css" rel = "stylesheet" type = "text/css">
@@ -47,7 +47,7 @@
 	</div>
 	
 	<div id = "footer">
-		<p> SIMCHAT 0.0.1 &nbsp;&nbsp; | &nbsp;&nbsp; 
+		<p> SIMCHAT 0.0.2 &nbsp;&nbsp; | &nbsp;&nbsp; 
 		<a class = "footer_a" href = "https://github.com/antibiotics11/simchat"> GitHub </a>
 		</p>
 		<p> Made by <a class = "footer_a" href = "https://blog.abxattic.com"> Antibiotics </a>, 2021</p>
