@@ -8,10 +8,11 @@
 if ($_GET['code']) {
 
         if ($_GET['passwd']) {
+				
+				include '../func/db.php';
                 $code = $_GET['code'];
-                $conn = mysqli_connect("localhost","simchat","","simchat");
-                $encoding = "set names utf8;";
-                $set_encoding = mysqli_query($conn, $encoding);
+                $conn = mysqli_connect("$hostname","$dbuserid","$dbpasswd","simchat");
+                require_once '../func/encoding.php';
                 $sql = "select * from board where code=$code;";
                 $result = mysqli_query($conn, $sql);
 
@@ -24,14 +25,14 @@ if ($_GET['code']) {
                         $del_confirm = mysqli_query($conn, $dsql);
                         echo "
                         <script>
-                                alert('삭제되었습니다.');
+                                alert('Confirm');
                                 window.location.href = './';
                         </script>
                         ";
                 } else {
                         echo "
                         <script>
-                                alert('비밀번호가 일치하지 않습니다.');
+                                alert('password does not match');
                                 history.back();
                         </script>
                         ";
@@ -40,7 +41,7 @@ if ($_GET['code']) {
         } else {
                 echo "
                 <script>
-                        alert('비밀번호를 입력하세요.');
+                        alert('enter your password');
                         history.back();
                 </script>
                 ";
@@ -48,8 +49,7 @@ if ($_GET['code']) {
 } else {
         echo "
         <script>
-                alert('삭제할 게시물이 없습니다.');
-                history.back();
+            history.back();
         </script>
         ";
 }

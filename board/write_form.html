@@ -1,16 +1,19 @@
-<form action = "./board/write_ok.php" method = "post" >
-<table style = "text-align: center; width: 60%;">
-	<tr>
-	<td style = "width: 10%;">
-		Anonymous <br>
-		<input type = "password" name = "passwd" style = "margin-top:0.8%; width: 80%;"placeholder = "password" required>
-	</td>
-	<td style = "width: 60%;">
-		<textarea rows = "2" name = "contents" rows = "3" style = "width: 80%; overflow:hidden; word-break: break-all;" wrap = "hard" required></textarea>
-	</td>
-	<td style = "width: 15%;">
-		<button type = "submit" class = "btn1"> Write </button>
-	</td>
-	</tr>
-</table>
-</form>
+<link href = "./css/form.css" rel = "stylesheet" type = "text/css">
+<div class = "write_form">
+	<form action = "./board/write_ok.php" method = "post" >
+	<table style = "text-align: center; width:;">
+		<tr>
+			<td style = "width: 10%;">
+				Anonymous <br>
+				<input type = "password" name = "passwd" style = "margin-top:0.8%; width: 80%;"placeholder = "password" required>
+			</td>
+			<td style = "width: 60%;">
+				<textarea rows = "2" name = "contents" rows = "3" style = "width: 80%; overflow:hidden; word-break: break-all;" wrap = "hard" required></textarea>
+			</td>
+			<td style = "width: 15%;">
+				<button type = "submit" class = "btn1"> Write </button>
+			</td>
+		</tr>
+	</table>
+	</form>
+</div>

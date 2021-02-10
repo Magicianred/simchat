@@ -1,18 +1,20 @@
 <?php
-	$conn = mysqli_connect("localhost","simchat","","simchat");
-	$encoding = "set names utf8;";
-	$set_encoding = mysqli_query($conn, $encoding);
+	include './func/db.php';
+	$conn = mysqli_connect("$hostname","$dbuserid","$dbpasswd","simchat");
+	require_once './func/encoding.php';
 	$view_sql = "select * from board order by code desc;";
 	$result = mysqli_query($conn, $view_sql);
 	while ($board = mysqli_fetch_array($result)) { ?>
 
 <script type = "text/javascript">
 function del<?=$board['code']?>(){
+	
 	var url = './board/delete_ok.php?code=<?=$board['code']?>&passwd=';
-	var text = prompt("Enter the password","");
-		if (text) {
-			location.href = url + text;
-		}
+	var text = prompt("enter your password","");
+	
+	if (text) {
+		location.href = url + text;
+	}
 }
 </script>
 <br>
@@ -36,7 +38,7 @@ function del<?=$board['code']?>(){
 				<?php echo $board['numlike'];?>
 			</a>
 			&nbsp;&nbsp;|&nbsp;&nbsp;
-			<a href = "javascript:del<?=$board['code']?>()">삭제하기</a>
+			<a href = "javascript:del<?=$board['code']?>()">Delete</a>
 			</div>
 		</div>
 	</td>

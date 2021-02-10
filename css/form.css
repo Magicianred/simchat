@@ -1,0 +1,31 @@
+.write_form {
+	/* background-color: #d3d3d3; */
+	border-radius: 10px 10px;
+	/* box-shadow: 0px 0px 5px #000; */
+	margin-right: 40%;
+}
+
+.btn1 {
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	background-color:#ffffff;
+	border-radius:10px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Trebuchet MS;
+	font-size:17px;
+	padding:15px 20px;
+	text-decoration:none;
+}
+
+.btn1:hover {
+	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+	background-color:#f6f6f6;
+}
+
+.btn1:active {
+	position:relative;
+	top:1px;
+}
+
