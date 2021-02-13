@@ -8,7 +8,6 @@
 if ($_GET['code']) {
 
         if ($_GET['passwd']) {
-				
 				include '../func/db.php';
                 $code = $_GET['code'];
                 $conn = mysqli_connect("$hostname","$dbuserid","$dbpasswd","simchat");
@@ -20,9 +19,11 @@ if ($_GET['code']) {
                         $ori_passwd = $info['password'];
                 }
 
-                if ($_GET['passwd'] == $ori_passwd) {
-                        $dsql = "delete from board where code=$code";
-                        $del_confirm = mysqli_query($conn, $dsql);
+                if ((string)md5((string)$_GET['passwd']) == $ori_passwd) {
+					$dsql_1 = "delete from board where code=$code;";
+					$dsql_2	= "delete from numlike where code=$code;";
+					$del_confirm_1 = mysqli_query($conn, $dsql_1);
+					$del_confirm_2 = mysqli_query($conn, $dsql_2);
                         echo "
                         <script>
                                 alert('Confirm');
