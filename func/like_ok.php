@@ -2,7 +2,7 @@
 <html>
 <body style = "background-color: #292a2d;">
 <?php
-require_once '../board/auto_reset_count.php';
+include_once '../board/auto_reset_count.php';
 	
 if ($_GET['code']) {
 
