@@ -14,7 +14,7 @@ CREATE TABLE `board` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 LOCK TABLES `board` WRITE;
-INSERT INTO `board` VALUES (1,'Anonymous','test','Function Test','2021-02-04',1);
+INSERT INTO `board` VALUES (0,'Anonymous','1234','SimChat Project by Antibiotics','2021-02-04',0);
 UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `numlike`;
@@ -29,3 +29,14 @@ CREATE TABLE `numlike` (
 LOCK TABLES `numlike` WRITE;
 INSERT INTO `numlike` VALUES (0,'0.0.0.0', 0);
 UNLOCK TABLES;
+
+DROP TABLE IF EXISTS `members`;
+
+CREATE TABLE `members` (
+  `userid` char(100) NOT NULL,
+  `password` char(100) NOT NULL,
+  `theme` int(2) NOT NULL,
+  `avatar` text NOT NULL,
+  `signupdate` date NOT NULL,
+  PRIMARY KEY (`userid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

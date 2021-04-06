@@ -1,0 +1,14 @@
+.write_form {
+	/* background-color: #d3d3d3; */
+	border-radius: 10px 10px;
+}
+
+.write_form table {
+	text-align: center; 
+	width: 100%;
+}
+
+.write_form .btn1 {
+	font-size:15x;
+	padding:15px 20px;
+}

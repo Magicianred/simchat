@@ -1,0 +1,159 @@
+/* Milkyway */
+
+body {
+	margin: 0;
+	background-size: cover;
+}
+
+#container {
+	font-family: 'Noto Sans JP', sans-serif;
+	padding: 0 0 0 0;
+}
+
+#header {
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	padding-top: 5px;
+	padding-bottom: 10px;
+	padding-left: 10%;
+}
+
+#header p {
+	font-size: 120%;
+	font-weight: bold;
+	color: #aab1c0;
+	word-break: keep-all;
+	cursor: default;
+	text-shadow: 2px 2px 2px black;
+}
+
+.reload {
+	float: right;
+	margin-right: 20%;
+}
+
+.reload:hover {
+	position: relative;
+	top: 1px;
+}
+
+.header_a {
+    text-decoration: none;
+    color: #aab1c0;
+	text-shadow: 2px 2px 2px black;
+}
+
+
+@media screen  and (max-width: 969px) {
+	
+	body {
+		background-image: url("../files/themes/theme_milkyway_m.jpg");
+	}
+	
+	#main {
+		margin-top: 180px;
+	}
+	
+	#useraccount {
+		margin-top: 0px;
+		margin-left: 2%;
+		margin-right: 2%;
+		text-align: center;
+		background-color: rgba( 170, 177, 192, 0.7 );
+		border-radius: 15px 15px;
+		padding-top: 2%;
+		padding-bottom: 3%;
+	}
+	
+	#contents {
+		margin-top: 2%;
+		margin-left: 2%;
+		margin-right: 2%;
+		background-color: #616c82;
+		background-color: rgba( 170, 177, 192, 0.7 );
+		border-radius: 15px 15px;
+		padding: 3% 3% 3% 3%;
+		overflow: auto;
+		height: 300px;
+	}
+	
+}
+
+@media screen and (min-width:970px) {
+	
+	body {
+		background-image: url("../files/themes/theme_milkyway.jpg");
+	}
+	
+	#main {
+		position: fixed;
+		width: 100%;
+		margin-top: 180px;
+	}
+	
+	#useraccount {
+		margin-top: 0px;
+		text-align: center;
+		float: left;
+		background-color: #616c82;
+		background-color: rgba( 170, 177, 192, 0.5 );
+		border-radius: 15px 15px;
+		width: 30%;
+		margin-left: 10%;
+		padding-top: 2%;
+		padding-bottom: 3%;
+	}
+	
+	#contents {
+		margin-top: 0px;
+		float: right;
+		background-color: rgba( 170, 177, 192, 0.7 );
+		border-radius: 15px 15px;
+		width: 40%;
+		margin-right: 10%;
+		padding: 3% 3% 3% 3%;
+		overflow: auto;
+		height: 410px;
+	}
+
+}
+
+.btn1 {
+	background-color: rgba(170, 177, 192, 0.1);
+	border-radius: 10px;
+	border: 1px solid #292c3f;
+	display: inline-block;
+	cursor: pointer;
+	color: black;
+	font-family: Trebuchet MS;
+	font-size: 14x;
+	padding: 5px 8px;
+	text-decoration: none;
+}
+
+.btn1:hover {
+	position:relative;
+	top:1px;
+}
+
+#footer {
+	cursor: default;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: #292c3f;
+	text-align: center;
+	color: white;
+}
+
+#footer a {
+	cursor: pointer;
+	color: white;
+	text-decoration: none;
+}
+
+.footer_a:hover {
+	position: relative;
+	top: 1px;
+}

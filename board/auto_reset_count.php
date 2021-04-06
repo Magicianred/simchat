@@ -6,7 +6,7 @@
                 $date_old = file_get_contents('./'.$datefilename);
         } else {
                 file_put_contents((string)'./'.$datefilename, (int)$date);
-                exit;
+                $date_old = $date;
         }
 
         if ((int)$date_old != (int)$date) {

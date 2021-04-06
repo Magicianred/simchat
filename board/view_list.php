@@ -1,10 +1,27 @@
 <?php
 	include './func/db.php';
+	include './account/session.php';
 	$conn = mysqli_connect("$hostname","$dbuserid","$dbpasswd","simchat");
 	require_once './func/encoding.php';
 	$view_sql = "select * from board order by code desc;";
 	$result = mysqli_query($conn, $view_sql);
-	while ($board = mysqli_fetch_array($result)) { ?>
+	while ($board = mysqli_fetch_array($result)) { 
+		if ((string)$board['username'] == 'Anonymous') {
+			$viewavatar = "./files/etc/anon.png";
+			$viewdel = true;
+		} else {
+			$avatar_sql = "select * from members where userid = '".$board['username']."';";
+			$avatar_sql = mysqli_query($conn, $avatar_sql);
+			while ($useravatar = mysqli_fetch_array($avatar_sql)) {
+				$viewavatar = (string)$useravatar['avatar']; 
+			}
+			if ($_SESSION['userid'] == $board['username']) {
+				$viewdel = true;
+			} else {
+				$viewdel = false;
+			}
+		}
+?>
 
 <script type = "text/javascript">
 function del<?=$board['code']?>(){
@@ -19,13 +36,13 @@ function del<?=$board['code']?>(){
 </script>
 <br>
 <div class = "view_list" width = "100%">
-<table width = "60%">
+<table width = "100%">
 	<tr>
-	<td width = "10%" style = "vertical-align: top;">
-		<img src = "./files/anon.png" alt = "이미지" width = "40px">
+	<td width = "30%" style = "vertical-align: top; text-align: center;">
+		<img src = "<?=$viewavatar?>" alt = "img-avatar" style = "height: 50px; width: 50px; border-radius: 10px 10px; border: 1px solid black;">
 		<p> <?php echo htmlspecialchars($board['username']);?> </p>
 	</td>
-	<td width = "50%" style = "vertical-align: top;">
+	<td width = "65%" style = "vertical-align: top;">
 		<div class = "read">
 			<p style = "word-break: break-all;">
 			<?php echo htmlspecialchars($board['contents']);?>
@@ -34,11 +51,13 @@ function del<?=$board['code']?>(){
 			<?php echo $board['date'];?>
 			&nbsp;&nbsp;|&nbsp;&nbsp;
 			<a href = "./func/like_ok.php?code=<?=$board['code']?>">
-				<img src = "./files/like.svg" alt = "like" width = "15px">
+				<img src = "./files/etc/like.svg" alt = "like" width = "15px">
 				<?php echo $board['numlike'];?>
 			</a>
+			<?php if ($viewdel) { ?>
 			&nbsp;&nbsp;|&nbsp;&nbsp;
 			<a href = "javascript:del<?=$board['code']?>()">Delete</a>
+			<? } ?>
 			</div>
 		</div>
 	</td>
