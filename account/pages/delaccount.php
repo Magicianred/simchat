@@ -1,6 +1,6 @@
 <?php 
 	if (!checklogin()) {
-		header('Location: ../../index.php?act=anon');
+		header('Location: ../index.php?act=anon');
 	}
 ?>
 
