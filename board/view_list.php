@@ -40,23 +40,23 @@ function del<?=$board['code']?>(){
 	<tr>
 	<td width = "30%" style = "vertical-align: top; text-align: center;">
 		<img src = "<?=$viewavatar?>" alt = "img-avatar" style = "height: 50px; width: 50px; border-radius: 10px 10px; border: 1px solid black;">
-		<p> <?php echo htmlspecialchars($board['username']);?> </p>
+		<p> <?=htmlspecialchars($board['username'])?> </p>
 	</td>
 	<td width = "65%" style = "vertical-align: top;">
 		<div class = "read">
 			<p style = "word-break: break-all;">
-			<?php echo htmlspecialchars($board['contents']);?>
+			<?=htmlspecialchars($board['contents'])?>
 			</p>
 			<div style = "width: 100%; border-top: 1px solid grey; text-align: center;">
-			<?php echo $board['date'];?>
+			<?=$board['date']?>
 			&nbsp;&nbsp;|&nbsp;&nbsp;
-			<a href = "./func/like_ok.php?code=<?=$board['code']?>">
+			<a href = "./func/like_ok.php?code=<?=$board['code']?>" style = "text-decoration: none; color: black;">
 				<img src = "./files/etc/like.svg" alt = "like" width = "15px">
-				<?php echo $board['numlike'];?>
+				<?=$board['numlike']?>
 			</a>
 			<?php if ($viewdel) { ?>
 			&nbsp;&nbsp;|&nbsp;&nbsp;
-			<a href = "javascript:del<?=$board['code']?>()">Delete</a>
+			<a href = "javascript:del<?=$board['code']?>()" style = "text-decoration: none; color: black;">Delete</a>
 			<? } ?>
 			</div>
 		</div>

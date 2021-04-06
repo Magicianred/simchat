@@ -113,6 +113,12 @@ body {
 		height: 300px;
 	}
 	
+	#footer {
+		margin-top: 3%;
+		padding-top: 1%;
+		padding-bottom: 2%;
+	}
+	
 }
 
 @media screen and (min-width:970px) {
@@ -145,6 +151,10 @@ body {
 		padding: 3% 3% 3% 3%;
 		overflow: auto;
 		height: 410px;
+	}
+	
+	#footer {
+		position: fixed;
 	}
 
 }
@@ -193,7 +203,6 @@ body {
 
 #footer {
 	cursor: default;
-	position: fixed;
 	bottom: 0;
 	width: 100%;
 	font-size: 105%;

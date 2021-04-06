@@ -1,4 +1,4 @@
-<?php if ($_SESSION['userid']) {
+<?php if (isset($_SESSION['userid'])) {
 		$writeform_username = $_SESSION['userid'];
 		$writeform_passwd = "*******";
 	} else {
