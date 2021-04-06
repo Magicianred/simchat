@@ -10,7 +10,7 @@ PHP 및 MySQL 학습 목적으로 제작중입니다.
 ## System Info
 
 Ubuntu 16.04 LTS <br>
-Apache HTTP Server 2.4 (Rewrite Engine On) <br>
+Apache HTTP Server 2.4 <br>
 PHP 7.0 / MySQL 5.7
 
 ## Screenshot
