@@ -147,6 +147,11 @@ body {
 	top:1px;
 }
 
+.inputbox1 {
+	border: 2px solid #292c3f;
+	padding: 5px 5px 5px 5px;
+}
+
 #footer {
 	cursor: default;
 	bottom: 0;

@@ -23,17 +23,6 @@
 		}
 ?>
 
-<script type = "text/javascript">
-function del<?=$board['code']?>(){
-	
-	var url = './board/delete_ok.php?code=<?=$board['code']?>&passwd=';
-	var text = prompt("enter your password","");
-	
-	if (text) {
-		location.href = url + text;
-	}
-}
-</script>
 <br>
 <div class = "view_list" width = "100%">
 <table width = "100%">
@@ -48,7 +37,7 @@ function del<?=$board['code']?>(){
 			<?=htmlspecialchars($board['contents'])?>
 			</p>
 			<div style = "width: 100%; border-top: 1px solid grey; text-align: center;">
-			<?=$board['date']?>
+			<span style = "cursor: default;"><?=$board['date']?></span>
 			&nbsp;&nbsp;|&nbsp;&nbsp;
 			<a href = "./func/like_ok.php?code=<?=$board['code']?>" style = "text-decoration: none; color: black;">
 				<img src = "./files/etc/like.svg" alt = "like" width = "15px">
@@ -56,7 +45,16 @@ function del<?=$board['code']?>(){
 			</a>
 			<?php if ($viewdel) { ?>
 			&nbsp;&nbsp;|&nbsp;&nbsp;
-			<a href = "javascript:del<?=$board['code']?>()" style = "text-decoration: none; color: black;">Delete</a>
+			<div style = "display: inline-block;">
+			<details>
+				<summary style = "cursor: pointer;"> Delete </summary>
+				<p> enter your password </p>
+				<form action = "./board/delete_ok.php?code=<?=$board['code']?>" method = "POST">
+					<input type = "password" name = "passwd" placeholder = "password" required>
+					<button class = "btn1"> Delete </button>
+				</form>
+			</details>
+			</div>
 			<? } ?>
 			</div>
 		</div>

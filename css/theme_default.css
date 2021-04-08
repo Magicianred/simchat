@@ -82,6 +82,11 @@ body {
 	background: #ffffff;
 }
 
+.inputbox1 {
+	border: 2px solid #d3d3d3;
+	padding: 5px 5px 5px 5px;
+}
+
 /* main */
 
 @media screen  and (max-width: 969px) {
@@ -173,8 +178,7 @@ body {
 
 .read {
     border-radius: 10px 10px;
-    border: 2px solid grey;
-    background-color: lightgrey;
+    background-color: #d3d3d3;
     font-size: 105%;
     color: black;
     text-align: left;

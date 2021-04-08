@@ -46,7 +46,7 @@
 				</script>";
 			}
 		} else {
-			if (isset($_GET['passwd'])) {
+			if (isset($_POST['passwd'])) {
 				$che_sql = "select * from board where code=$code";
 				$che_result = mysqli_query($conn, $che_sql);
 				
@@ -54,7 +54,7 @@
 					$boa_passwd = (string)$info['password'];
 				}
 
-				if ((string)md5((string)$_GET['passwd']) == (string)$boa_passwd) {
+				if ((string)md5((string)$_POST['passwd']) == (string)$boa_passwd) {
 					delete_post();
 				} else {
 					echo "
