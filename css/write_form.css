@@ -1,11 +1,36 @@
 .write_form {
 	/* background-color: #d3d3d3; */
 	border-radius: 10px 10px;
+	padding-left: 7%;
+}
+
+.inputbox2 {
+	margin-top: 4px;
+	padding-left: 5px;
+	padding-right: 5px;
+	width: 90px;
 }
 
 .write_form table {
 	text-align: center; 
 	width: 100%;
+}
+
+.write_form textarea {
+	width: 80%; 
+	overflow:hidden; 
+	word-break: break-all;
+	border-radius: 5px 5px;
+	border: 1px solid #d3d3d3;
+	height: 45px;
+}
+
+.write_form textarea:hover {
+	border: 1px solid blue;
+}
+
+.write_form textarea:active {
+	border: 1px solid blue;
 }
 
 .write_form .btn1 {

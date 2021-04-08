@@ -1,3 +1,4 @@
+<link href = "./css/view_list.css" rel = "stylesheet" type = "text/css">
 <?php
 	include './func/db.php';
 	include './account/session.php';
@@ -24,11 +25,11 @@
 ?>
 
 <br>
-<div class = "view_list" width = "100%">
-<table width = "100%">
+<div class = "view_list">
+<table>
 	<tr>
 	<td width = "30%" style = "vertical-align: top; text-align: center;">
-		<img src = "<?=$viewavatar?>" alt = "img-avatar" style = "height: 50px; width: 50px; border-radius: 10px 10px; border: 1px solid black;">
+		<img src = "<?=$viewavatar?>" alt = "img-avatar">
 		<p> <?=htmlspecialchars($board['username'])?> </p>
 	</td>
 	<td width = "65%" style = "vertical-align: top;">
@@ -37,17 +38,17 @@
 			<?=htmlspecialchars($board['contents'])?>
 			</p>
 			<div style = "width: 100%; border-top: 1px solid grey; text-align: center;">
-			<span style = "cursor: default;"><?=$board['date']?></span>
+			<span><?=$board['date']?></span>
 			&nbsp;&nbsp;|&nbsp;&nbsp;
-			<a href = "./func/like_ok.php?code=<?=$board['code']?>" style = "text-decoration: none; color: black;">
-				<img src = "./files/etc/like.svg" alt = "like" width = "15px">
+			<a href = "./func/like_ok.php?code=<?=$board['code']?>">
+				<img src = "./files/etc/like.svg" alt = "like">
 				<?=$board['numlike']?>
 			</a>
 			<?php if ($viewdel) { ?>
 			&nbsp;&nbsp;|&nbsp;&nbsp;
 			<div style = "display: inline-block;">
 			<details>
-				<summary style = "cursor: pointer;"> Delete </summary>
+				<summary> Delete </summary>
 				<p> enter your password </p>
 				<form action = "./board/delete_ok.php?code=<?=$board['code']?>" method = "POST">
 					<input type = "password" name = "passwd" placeholder = "password" required>

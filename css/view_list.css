@@ -1,0 +1,46 @@
+.view_list {
+	width: 100%;
+}
+
+.view_list table {
+	width: 100%;
+}
+
+.view_list img {
+	height: 50px; 
+	width: 50px; 
+	border-radius: 10px 10px; 
+	border: 1px solid black;
+}
+
+.view_list .read img {
+	height: 15px;
+	width: 15px;
+	border-radius: 0 0;
+	border: 0;
+}
+
+/*
+.view_list .read img:hover {
+	position: relative;
+	top: 1px;
+}
+*/
+
+.view_list .read span {
+	cursor: default;
+}
+
+.view_list .read a {
+	text-decoration: none; 
+	color: black;
+}
+
+.view_list summary {
+	cursor: pointer;
+}
+
+.view_list summary:hover {
+	position: relative;
+	top: 1px;
+}

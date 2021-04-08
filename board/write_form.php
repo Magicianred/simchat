@@ -4,7 +4,7 @@
 		$writeform_passwd = "*******";
 	} else {
 		$writeform_username = "Anonymous";
-		$writeform_passwd = "<input type = 'password' name = 'passwd' style = 'margin-top:0.8%; width: 80%;' placeholder = 'password' required>";
+		$writeform_passwd = "<input class = 'inputbox2' type = 'password' name = 'passwd' placeholder = 'password' required>";
 	}
 ?>
 <link href = "./css/write_form.css" rel = "stylesheet" type = "text/css">
@@ -18,10 +18,10 @@
 				<?=(string)$writeform_passwd?>
 			</td>
 			<td style = "width: 50%;">
-				<textarea rows = "2" name = "contents" style = "width: 80%; overflow:hidden; word-break: break-all;" wrap = "hard" required></textarea>
+				<textarea rows = "2" name = "contents" wrap = "hard" required></textarea>
 			</td>
 			<td style = "width: 15%;">
-				<button type = "submit" class = "btn1"> Write </button>
+				<button type = "submit" class = "btn1"> Submit </button>
 			</td>
 		</tr>
 	</table>
