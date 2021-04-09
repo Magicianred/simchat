@@ -15,7 +15,6 @@ PHP 7.0 / MySQL 5.7
 
 ## Screenshot
 
-0.1.0
-![1](https://user-images.githubusercontent.com/75349747/113767852-1fb8fd00-975a-11eb-8e19-3214a203db00.PNG)
-![2](https://user-images.githubusercontent.com/75349747/113767858-20ea2a00-975a-11eb-9d86-ca8338b64848.PNG)
-![3](https://user-images.githubusercontent.com/75349747/113767868-247db100-975a-11eb-9d3b-5c19e9e87f7f.PNG)
+![1](https://user-images.githubusercontent.com/75349747/114183435-a6e6ba80-997e-11eb-8e8c-d8411e4ecc30.PNG)
+![2](https://user-images.githubusercontent.com/75349747/114183415-a2ba9d00-997e-11eb-95ef-83a84e6eb8c8.PNG)
+![3](https://user-images.githubusercontent.com/75349747/114183426-a5b58d80-997e-11eb-962b-07bca307d4c0.PNG)
